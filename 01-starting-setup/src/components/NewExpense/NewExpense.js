@@ -7,6 +7,7 @@ const NewExpense = (props) => {
             ...enteredExpenseData,
             id: Math.random().toString()
         };
+        console.log('In NewExpense.js');
         console.log(expenseData);
         props.onAddExpense(expenseData);
     };
