@@ -11,9 +11,24 @@ function Expenses(props) {
     changeFilterYear(year);
   };
 
+  // If you've already got data in a component and you just want to 
+  // change how it render (e.g. how many elements in an array should be rendered), 
+  // then a transformation like this should be enough:
   const selectedExpenses = props.items.filter(expense => {
     return expense.date.getFullYear().toString() === filterYear;
   });
+
+  let expenseContent = <p>No matched expense.</p>;
+  if( selectedExpenses.length > 0){
+    expenseContent = selectedExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  }
 
   return (
     <div>
@@ -22,14 +37,7 @@ function Expenses(props) {
           onFilter={filterChangeHandler}
           selectedYear={filterYear}
         />
-        {selectedExpenses.map((expense) => (
-          <ExpenseItem
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        ))}
+        {expenseContent}
       </Card>
     </div>
   );
