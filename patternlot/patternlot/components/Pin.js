@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import IconButton from '@mui/material/IconButton'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { white } from '@mui/material/colors';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const Pin = () => {
   return (
@@ -15,7 +15,8 @@ const Pin = () => {
             </ImageContainer>
             <Floating>
                 <IconButton>
-                    <AddShoppingCartIcon fontSize="large" style={{ color: 'white'}} stroke={"grey"} stroke-width={1}/>  
+                    <FavoriteBorderIcon fontSize="medium" style={{ color: 'white'}} />  
+                    {/* <AddShoppingCartIcon fontSize="large" style={{ color: 'white'}} stroke={"grey"} stroke-width={1}/>   */}
                 </IconButton>
             </Floating>
         </Container>
