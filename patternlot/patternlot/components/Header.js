@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 import IconButton from '@mui/material/IconButton'
 import BasicMenu from './BasicMenu'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -25,7 +26,7 @@ const Header = () => {
         </IconButton>
       </LogoWrapper>
       <HomePageButton>
-        <a href='/'>Home</a>
+        <Link href='/'>Home</Link>
       </HomePageButton>
       <CategoryWrapper>
         <BasicMenu ></BasicMenu>
@@ -57,7 +58,7 @@ const Header = () => {
           <KeyboardArrowDownIcon style={{color: 'black'}} />
         </IconButton>
       </IconsWrapper>
-    </Wrapper>
+    </Wrapper> 
   )
 }
 

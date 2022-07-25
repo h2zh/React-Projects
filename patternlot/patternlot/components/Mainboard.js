@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin-top: 15px;
+    margin-top: 18px;
 `
 
 const Container = styled.div`
